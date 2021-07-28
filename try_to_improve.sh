@@ -1,34 +1,9 @@
 
 
 #!/usr/bin/bash ulimit -Sv 1000000
-echo "Usage :"
-#echo "Input Folder / Output Folder"
-echo "Flags : hdr fuer hohe Farben "
 
-#hdr=$1
-
-#cd /sdcard/pixiv/
-#cd /sdcard/hintergrund/
 cd $1
 
-#pngtojpg.sh /sdcard/background/bright
-#path = /sdcard/background/test/
-
-rm -r /home/wiffzack/dark_upscaled/
-rm -r /home/wiffzack/bright_upscaled/
-mkdir /home/wiffzack/bright_upscaled/
-mkdir /home/wiffzack/dark_upscaled
-rm -r /home/wiffzack/contrast_up
-mkdir /home/wiffzack/contrast_up
-
-rm  -r /home/wiffzack/contrast_filter2/
-mkdir /home/wiffzack/contrast_filter2/
-rm -r /home/wiffzack/filtered/
-mkdir /home/wiffzack/filtered
-#pixelmatch image1.png image2.png output.png 0.1
-
-contrustup=$1
-style_trasfer=$2
 
 echo "set memory limit uvlimit ~5.7GB"
 ulimit -Sv 5708100
@@ -116,12 +91,12 @@ do
                         if (( $(bc -l <<< "${redv/e/E} > ${redlimit/e/E}") ))
 		        then
 				echo "saturation push !!!!!!!!!!!!----"
-		                convert  -profile /image/hdr.icc -cdl  /image/config_patch5.xml   -evaluate log 10  -modulate 100,120,300 -brightness-contrast -40x10 -white-threshold 92% -gaussian 4 $f - | composite  -compose overlay $f - $f
+		                convert  -profile hdr.icc -cdl  config_patch5.xml   -evaluate log 10  -modulate 100,120,300 -brightness-contrast -40x10 -white-threshold 92% -gaussian 4 $f - | composite  -compose overlay $f - $f
 			else
-		                convert  -profile /image/hdr.icc   -evaluate log 10  -modulate 100,120,300 -brightness-contrast -40x15 -white-threshold 92% -gaussian 4 $f - | composite  -compose overlay $f - $f
+		                convert  -profile hdr.icc   -evaluate log 10  -modulate 100,120,300 -brightness-contrast -40x15 -white-threshold 92% -gaussian 4 $f - | composite  -compose overlay $f - $f
 			fi
 		else
-	                convert  -profile /image/hdr.icc   -evaluate log 10  -modulate 100,120,300 -brightness-contrast -40x10 -white-threshold 92% -gaussian 4 $f - | composite  -compose overlay $f - $f
+	                convert  -profile hdr.icc   -evaluate log 10  -modulate 100,120,300 -brightness-contrast -40x10 -white-threshold 92% -gaussian 4 $f - | composite  -compose overlay $f - $f
 		fi
 
                 #python /image/2dclahe.py $f
