@@ -10,7 +10,8 @@
 * [entropy-preserving-mapping-prior](https://github.com/bigmms/entropy-preserving-mapping-prior)
 * [dctdenoising](https://github.com/gfacciol/DCTdenoising)
 * [AGCWD](https://github.com/qyou/AGCWD)
-
+* [ICC Color Profile](https://www.color.org/index.xalter)
+ 
 ## singleLDR2HDR:(for Intel)
 * sudo apt-get install intel-mkl
 * python -m pip install git+https://github.com/haasad/PyPardisoProject@0.3.2
