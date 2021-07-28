@@ -26,4 +26,4 @@ not live not long enough so see it finish.
 
 ## singleLDR2HDR:(low Memory System)
 > To reduce the memory usage it split the image into 2 vertical images and after processing put them back together .
-> Go to Patch and copy singleLDR2HDR_run.py to the main folder from the singleLDR2HDR project
+* Go to Patch and copy singleLDR2HDR_run.py to the main folder from the singleLDR2HDR project
