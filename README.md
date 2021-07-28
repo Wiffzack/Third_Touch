@@ -14,9 +14,9 @@
 ## singleLDR2HDR:(for Intel)
 * sudo apt-get install intel-mkl
 * python -m pip install git+https://github.com/haasad/PyPardisoProject@0.3.2
-Now go to src and change in wls_filter.py from
+> Now go to src and change in wls_filter.py from
 * from scipy.sparse.linalg import spsolve, lsqr
-to 
+> to 
 * from scipy.sparse.linalg import lsqr
 * from pypardiso import spsolve
 
