@@ -29,3 +29,6 @@ not live not long enough so see it finish.
 ## singleLDR2HDR:(low Memory System)
 > ! If the image isnt symmetric this can couse a line in the middle! To reduce the memory usage it split the image into 2 vertical images and after processing put them back together .
 * Go to Patch and copy singleLDR2HDR_run.py to the main folder from the singleLDR2HDR project
+
+## FFWT Intel MKL Wrapper
+Go to patch -> make -> cp *.so /usr/lib/ -> export LD_PRELOAD="/usr/lib/fftw_wrapper.so"
