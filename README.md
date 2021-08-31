@@ -31,4 +31,4 @@ not live not long enough so see it finish.
 * Go to Patch and copy singleLDR2HDR_run.py to the main folder from the singleLDR2HDR project
 
 ## FFWT Intel MKL Wrapper
-Go to patch -> make -> cp *.so /usr/lib/ -> export LD_PRELOAD="/usr/lib/fftw_wrapper.so"
+Go to patch -> make -> cp *.so /usr/lib/ -> export LD_PRELOAD="$LD_PRELOAD:/usr/lib/fftw_wrapper.so"
